@@ -1,0 +1,56 @@
+/******************************************************************************
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+class Doadores{
+    private:
+    string nome;
+    int telefone;
+    int idade;
+    
+    public:
+    string tipo;
+    
+    //Construtor
+    Doadores(){
+        nome = "Maria";
+        telefone = 40028922;
+        idade = 25;
+    }
+    
+    //Getters & Setters
+    string getTipo(){
+        return this->tipo;
+    }
+    
+    void setTipo(string t){
+        this->tipo = t;
+    }
+    
+    //Método
+    void imprimir();
+};
+
+int main()
+{
+    Doadores d1;
+    
+    d1.setTipo("O-");
+    
+    cout << "Doador universal:" << d1.getTipo() << endl;
+    
+    return 0;
+}
+
+void Doadores::imprimir(){
+    cout << nome << endl;
+    cout << telefone << endl;
+    cout << idade << endl;
+    cout << "---------" << endl;
+};
