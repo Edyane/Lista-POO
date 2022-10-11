@@ -3,14 +3,17 @@
 using namespace std;
 
 class contaCorrente {
+    //Atributos privados
     private:
     float saldo;
     float quantia;
     
+    //Atributos públicos
     public: 
     string nome;
     string CPF;
     float tarifa;
+    float saque;
     
     //Getters
     float getSaldo(){
@@ -31,9 +34,10 @@ class contaCorrente {
     }
     
     
-    //Cadastrar cliente com nome, CPF e atributos privados
-    //Conta nova = valores de saldo e quantia devem ser igual a 0 
+    //Método cadastrar cliente
     void cadastrarCliente(){
+        //Conta nova = valores de saldo e quantia devem ser igual a 0 
+    
         cout << "Digite o nome: " << nome << endl;
         cin >> nome;
         
@@ -41,32 +45,71 @@ class contaCorrente {
         cin >> CPF;
         
         cout << "Digite o saldo: " << getSaldo() << endl;
-        cin >> saldo;
+        cin >> this->saldo;
         
         cout << "Digite a quantia: " << getQuantia() << endl;
-        cin >> quantia;
+        cin >> this->quantia;
     }
     
+    //Método depositar
     void depositar(){
         //Transformar os valores de quantia em saldo
-    }
-    
-    void sacar(){
-        sacar = saldo - quantia - tarifa;
         
+        if (quantia > 0) {
+            saldo = (quantia + saldo);
+        } else {
+            saldo = this->saldo;
+        }
     }
     
+    //Método sacar
+    void sacar()
+        float tarifa = 0.05;
+        saque = this->saldo - (quantia - tarifa);
+        cout << "O valor sacado foi de: " << saque << endl;     
+    }
+    
+    //Método obter saldo
     void obterSaldo(){
-        cout << "O saldo é: " << saldo << endl;
+        cout << "O saldo é: " << this->saldo << endl;
     }
     
 };
 
 int main()
 {
-    contaCorrente c1;
     
-    c1.cadastrarCliente();
-
+    contaCorrente c1[100];
+    
+    //contaCorrente c1;
+    //c1.cadastrarCliente();
+    
+    
+    switch () {
+        case 1 Cadastrar cliente:
+            cadastrarCliente();
+            
+            for (int i = 0; i < 100, i++) {
+                
+            }
+        break;
+        
+        case 2 Depositar:
+            depositar();
+        break;
+        
+        case 3 Sacar:
+            sacar();
+        break;
+        
+        case 4 Obter saldo:
+            obterSaldo();
+        break;
+        
+        case 5 Sair
+        break;
+    
+    }
+    
     return 0;
 }
