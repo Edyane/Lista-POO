@@ -10,6 +10,7 @@ class contaCorrente {
     public: 
     string nome;
     string CPF;
+    float tarifa;
     
     //Getters
     float getSaldo(){
@@ -46,6 +47,18 @@ class contaCorrente {
         cin >> quantia;
     }
     
+    void depositar(){
+        //Transformar os valores de quantia em saldo
+    }
+    
+    void sacar(){
+        sacar = saldo - quantia - tarifa;
+        
+    }
+    
+    void obterSaldo(){
+        cout << "O saldo é: " << saldo << endl;
+    }
     
 };
 
