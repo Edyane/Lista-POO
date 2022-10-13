@@ -56,7 +56,7 @@ class contaCorrente {
         //Transformar os valores de quantia em saldo
         
         if (quantia > 0) {
-            saldo = (quantia + saldo);
+            saldo = (quantia + this->saldo);
         } else {
             saldo = this->saldo;
         }
